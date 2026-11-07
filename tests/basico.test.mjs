@@ -5,6 +5,7 @@ import path from 'node:path';
 import {alinhar, normalizar} from '../cli/alinhar.mjs';
 import {PASTA_ESTILOS, fontesDisponiveis, listarEstilos, validarEstilo} from '../cli/estilos.mjs';
 import {validarRoteiro} from '../cli/roteiro.mjs';
+import {juntarTokens} from '../cli/vozes/arquivo.mjs';
 
 test('normalizar tira acento, pontuação e caixa', () => {
 	assert.equal(normalizar('Ação!'), 'acao');
@@ -32,6 +33,14 @@ test('alinhar preenche palavras que a transcrição escreveu diferente', () => {
 	const cinquenta = r.palavras[1];
 	assert.equal(cinquenta.w, '50');
 	assert.ok(cinquenta.s >= 0.4 && cinquenta.e <= 1.1, `tempo do "50" fora do buraco: ${JSON.stringify(cinquenta)}`);
+});
+
+test('juntarTokens monta palavras a partir dos pedaços do Whisper', () => {
+	const tok = (text, from, to) => ({text, offsets: {from, to}});
+	const r = juntarTokens([tok('', 0, 0), tok(' "', 0, 60), tok('L', 60, 120), tok('iber', 120, 390), tok('ei', 390, 520), tok(' de', 520, 650), tok(' gra', 650, 850), tok('ça', 850, 1050)]);
+	assert.deepEqual(r.map((p) => p.w), ['Liberei', 'de', 'graça']);
+	assert.equal(r[0].s, 0);
+	assert.equal(r[2].e, 1.05);
 });
 
 test('todos os estilos da pasta são válidos', () => {
