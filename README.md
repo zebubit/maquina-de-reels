@@ -79,7 +79,7 @@ Comandos:
 |---|---|---|
 | `edge` | grátis | `{"provedor": "edge", "nome": "pt-BR-AntonioNeural"}` (ou `pt-BR-FranciscaNeural`) |
 | `elevenlabs` | pago | `{"provedor": "elevenlabs", "id": "<voice_id>"}` e a variável `ELEVENLABS_API_KEY` |
-| `arquivo` | grátis | `{"provedor": "arquivo", "arquivo": "minha-voz.m4a"}`: a máquina descobre o tempo de cada palavra com o Whisper, no seu computador (na primeira vez baixa ~500 MB) |
+| `arquivo` | grátis | `{"provedor": "arquivo", "arquivo": "minha-voz.m4a"}`: a máquina descobre o tempo de cada palavra com o Whisper, no seu computador (na primeira vez baixa e compila o Whisper e um modelo de ~500 MB) |
 
 A voz `edge` usa um serviço não oficial da Microsoft e pode mudar sem aviso. Pra uso comercial sério, prefira a ElevenLabs ou a sua gravação.
 
