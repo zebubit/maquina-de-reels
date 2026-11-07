@@ -2,9 +2,9 @@
 // Na primeira vez baixa o whisper.cpp e o modelo (~500 MB) para a pasta .whisper do projeto.
 import fs from 'node:fs';
 import path from 'node:path';
-import {execFileSync} from 'node:child_process';
 import {downloadWhisperModel, installWhisperCpp, toCaptions, transcribe} from '@remotion/install-whisper-cpp';
 import {RAIZ} from '../estilos.mjs';
+import {ffmpeg} from '../ffmpeg.mjs';
 
 const WHISPER_DIR = path.join(RAIZ, '.whisper');
 const VERSAO = '1.5.5';
@@ -27,5 +27,3 @@ export const falar = async ({pasta, voz = {}, pastaRoteiro}) => {
 	return {audio, ouvidas};
 };
 
-// usa o ffmpeg que vem junto com o Remotion, assim ninguém precisa instalar outro
-const ffmpeg = (args) => execFileSync('npx', ['remotion', 'ffmpeg', '-v', 'error', ...args], {cwd: RAIZ, stdio: 'inherit'});

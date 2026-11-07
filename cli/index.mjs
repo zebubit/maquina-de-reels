@@ -2,7 +2,7 @@
 // Máquina de Reels: roteiro.json -> voz -> legenda alinhada -> vídeo vertical 1080x1920.
 import fs from 'node:fs';
 import path from 'node:path';
-import {execFileSync} from 'node:child_process';
+import {ffmpeg} from './ffmpeg.mjs';
 import {alinhar} from './alinhar.mjs';
 import {carregarEstilo, listarEstilos, RAIZ} from './estilos.mjs';
 import {validarRoteiro} from './roteiro.mjs';
@@ -108,7 +108,7 @@ if (flags.has('--sem-voz') && fs.existsSync(arqTempos) && fs.existsSync(narracao
 	fs.writeFileSync(arqTempos, JSON.stringify(ouvidas));
 	// volume no padrão das redes (-16 LUFS); usa o ffmpeg que vem com o Remotion
 	const tmp = path.join(saida, 'narracao-tmp.mp3');
-	execFileSync('npx', ['remotion', 'ffmpeg', '-v', 'error', '-y', '-i', narracao, '-af', 'loudnorm=I=-16:TP=-1.5:LRA=11', '-ar', '44100', '-b:a', '160k', tmp], {cwd: RAIZ, stdio: 'inherit'});
+	ffmpeg(['-y', '-i', narracao, '-af', 'loudnorm=I=-16:TP=-1.5:LRA=11', '-ar', '44100', '-b:a', '160k', tmp]);
 	fs.renameSync(tmp, narracao);
 }
 
