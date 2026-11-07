@@ -188,11 +188,12 @@ const agrupar = (palavras: Palavra[], max: number) => {
 	return frases;
 };
 
-const Legenda: React.FC<{t: number; th: Tema; frases: Palavra[][]; destaques: Set<string>}> = ({t, th: {C, LEG, F_TIT, F_TXT, SOMBRA}, frases, destaques}) => {
+// na cena de foto, legenda do topo desce pro peito pra não cobrir o rosto
+const Legenda: React.FC<{t: number; th: Tema; frases: Palavra[][]; destaques: Set<string>; foto?: boolean}> = ({t, th: {C, LEG, F_TIT, F_TXT, SOMBRA}, frases, destaques, foto}) => {
 	const i = frases.findIndex((f, k) => t >= f[0].s - 0.08 && t < (frases[k + 1]?.[0].s ?? f[f.length - 1].e + 0.6) - 0.04);
 	if (i < 0) return null;
 	return (
-		<div style={{position: 'absolute', left: 70, right: 70, top: LEG.posicao * 1920, textAlign: 'center', lineHeight: 1.18}}>
+		<div style={{position: 'absolute', left: 70, right: 70, top: (foto && LEG.posicao < 0.4 ? 0.44 : LEG.posicao) * 1920, textAlign: 'center', lineHeight: 1.18}}>
 			{frases[i].map((w, k) => {
 				const q = pr(t, w.s - 0.06, 0.25);
 				const hi = destaques.has(norm(w.w));
@@ -256,7 +257,7 @@ export const Reels: React.FC<Props> = ({roteiro, estilo, palavras, timeline, aud
 				const f = interpolate(t, [c.s - 0.05, c.s + 0.02, c.s + 0.16], [0, 0.85, 0], CL);
 				return f > 0 ? <AbsoluteFill key={i} style={{background: th.C.dest, opacity: f}} /> : null;
 			})}
-			{cenas[atual]?.tipo !== 'cta' && <Legenda t={t} th={th} frases={frases} destaques={destaques} />}
+			{cenas[atual]?.tipo !== 'cta' && <Legenda t={t} th={th} frases={frases} destaques={destaques} foto={cenas[atual]?.tipo === 'foto'} />}
 			<Assinatura t={t} tipo={cenas[atual]?.tipo} th={th} roteiro={roteiro} desde={timeline.cenas[0]?.e ?? 0} />
 			<AbsoluteFill style={{background: '#000', opacity: interpolate(t, [0, 0.35, fim + 0.7, fim + 1.2], [1, 0, 0, 1], CL)}} />
 		</AbsoluteFill>
