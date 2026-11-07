@@ -18,7 +18,7 @@ Você escreve as falas num arquivo `roteiro.json`, escolhe um estilo e roda um c
 Precisa do [Node.js](https://nodejs.org) 20 ou mais novo.
 
 ```bash
-git clone https://github.com/SEU-USUARIO/maquina-de-reels.git
+git clone https://github.com/zebubit/maquina-de-reels.git
 cd maquina-de-reels
 npm install
 
