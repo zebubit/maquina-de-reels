@@ -1,0 +1,9 @@
+{
+  "nome": "creme-claro",
+  "autor": "@dionefol",
+  "descricao": "Fundo creme claro, texto preto e laranja. Uma palavra grande por vez no meio da tela.",
+  "fundo": "#f4f1ec", "fundo2": "#e9e4dc", "texto": "#141414", "destaque": "#f26b1d", "card": "#ffffff", "linha": "rgba(242,107,29,0.25)",
+  "fonteTitulo": "Inter", "fonteTexto": "Inter", "fonteMono": "JetBrains Mono", "tituloCaixaAlta": false,
+  "legenda": {"posicao": 0.55, "tamanho": 78, "palavrasPorVez": 1, "caixaAlta": false, "destaqueItalico": false},
+  "animacao": {"entrada": "pop", "grade": false, "particulas": false, "flashCor": false}
+}

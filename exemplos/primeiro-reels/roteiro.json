@@ -1,0 +1,68 @@
+{
+  "slug": "primeiro-reels",
+  "estilo": "dourado-noturno",
+  "voz": {
+    "provedor": "edge",
+    "nome": "pt-BR-AntonioNeural"
+  },
+  "destaques": [
+    "roteiro",
+    "grátis",
+    "código",
+    "estilo"
+  ],
+  "assinatura": {
+    "nome": "Máquina de Reels",
+    "handles": "github.com/seu-usuario/maquina-de-reels"
+  },
+  "cenas": [
+    {
+      "tipo": "titulo",
+      "fala": "Esse vídeo foi feito inteiro a partir de um roteiro de texto.",
+      "icone": "🎬",
+      "titulo": "Feito com *código*",
+      "sub": "sem editor de vídeo"
+    },
+    {
+      "tipo": "card",
+      "fala": "Você escreve as falas, escolhe um estilo, e a máquina cuida do resto: voz, legenda e animação.",
+      "kicker": "como funciona",
+      "titulo": "Três *passos*",
+      "itens": [
+        "Escreva o *roteiro*",
+        "Escolha um *estilo*",
+        "Rode um comando"
+      ]
+    },
+    {
+      "tipo": "chat",
+      "fala": "Tem cena de conversa, pra mostrar atendimento ou perguntas do público.",
+      "titulo": "Cena de *chat*",
+      "msgs": [
+        {
+          "de": "cliente",
+          "txt": "Dá pra fazer em português?"
+        },
+        {
+          "de": "ia",
+          "txt": "Dá sim, com voz e legenda!"
+        }
+      ]
+    },
+    {
+      "tipo": "numero",
+      "fala": "Tem número animado, que sobe até o valor certo.",
+      "kicker": "exemplo",
+      "valor": 100,
+      "sufixo": "%",
+      "rotulo": "em *português*",
+      "barra": 100
+    },
+    {
+      "tipo": "cta",
+      "fala": "E é grátis e de código aberto. Comenta REELS que eu te mando o link.",
+      "palavra": "REELS",
+      "sub": "que eu te mando o link"
+    }
+  ]
+}

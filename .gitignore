@@ -1,0 +1,7 @@
+node_modules/
+.whisper/
+**/saida/
+*.mp4
+!docs/**/*.mp4
+.DS_Store
+.env

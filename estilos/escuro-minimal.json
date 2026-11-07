@@ -1,0 +1,9 @@
+{
+  "nome": "escuro-minimal",
+  "autor": "@dionefol",
+  "descricao": "Preto, azul e muito espaço. Palavra-chave da legenda em itálico serifado.",
+  "fundo": "#060607", "fundo2": "#15161b", "texto": "#EDEDED", "destaque": "#5AA9FF", "card": "#141418", "linha": "rgba(255,255,255,0.07)",
+  "fonteTitulo": "Playfair Display", "fonteTexto": "Inter", "fonteMono": "JetBrains Mono", "tituloCaixaAlta": false,
+  "legenda": {"posicao": 0.68, "tamanho": 54, "palavrasPorVez": 3, "caixaAlta": false, "destaqueItalico": true},
+  "animacao": {"entrada": "zoom", "grade": true, "particulas": false, "flashCor": false}
+}

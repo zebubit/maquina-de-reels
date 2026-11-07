@@ -1,0 +1,9 @@
+{
+  "nome": "azul-tech",
+  "autor": "@dione_fol",
+  "descricao": "Azul elétrico com grade e partículas. Combina com tecnologia e IA.",
+  "fundo": "#0A0A0A", "fundo2": "#0f1a2e", "texto": "#F2F6FF", "destaque": "#3B82F6", "card": "#111827", "linha": "rgba(96,165,250,0.16)",
+  "fonteTitulo": "Sora", "fonteTexto": "Inter", "fonteMono": "JetBrains Mono", "tituloCaixaAlta": true,
+  "legenda": {"posicao": 0.09, "tamanho": 64, "palavrasPorVez": 3, "caixaAlta": true, "destaqueItalico": false},
+  "animacao": {"entrada": "pop", "grade": true, "particulas": true, "flashCor": true}
+}

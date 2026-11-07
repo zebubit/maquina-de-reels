@@ -1,0 +1,9 @@
+{
+  "nome": "laranja-impacto",
+  "autor": "@dionefol",
+  "descricao": "Legenda grande em caixa alta no topo, cortes rápidos e flash laranja na troca de cena.",
+  "fundo": "#0c0a08", "fundo2": "#2a1710", "texto": "#F4EFE9", "destaque": "#F96026", "card": "#17110e", "linha": "rgba(249,96,38,0.18)",
+  "fonteTitulo": "Anton", "fonteTexto": "Inter", "fonteMono": "JetBrains Mono", "tituloCaixaAlta": true,
+  "legenda": {"posicao": 0.09, "tamanho": 66, "palavrasPorVez": 3, "caixaAlta": true, "destaqueItalico": false},
+  "animacao": {"entrada": "pop", "grade": false, "particulas": true, "flashCor": true}
+}

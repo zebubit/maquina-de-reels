@@ -1,0 +1,9 @@
+{
+  "nome": "dourado-noturno",
+  "autor": "@dionefol",
+  "descricao": "Fundo quase preto, dourado e título serifado. Bom pra explicar produto ou serviço com calma.",
+  "fundo": "#08090d", "fundo2": "#121826", "texto": "#F5F2EA", "destaque": "#E6BD4F", "card": "#14161c", "linha": "rgba(230,189,79,0.12)",
+  "fonteTitulo": "Playfair Display", "fonteTexto": "Inter", "fonteMono": "JetBrains Mono", "tituloCaixaAlta": false,
+  "legenda": {"posicao": 0.74, "tamanho": 58, "palavrasPorVez": 4, "caixaAlta": false, "destaqueItalico": true},
+  "animacao": {"entrada": "sobe", "grade": true, "particulas": true, "flashCor": false}
+}
