@@ -1,5 +1,7 @@
 # Máquina de Reels 🎬
 
+**Português** · [English](README.en.md)
+
 Crie **reels narrados em português** a partir de um roteiro de texto: voz, legenda palavra por palavra e animações, tudo em código. Sem editor de vídeo, sem crédito de IA de vídeo.
 
 Você escreve as falas num arquivo `roteiro.json`, escolhe um estilo e roda um comando. Sai um MP4 vertical 1080x1920 pronto pro Instagram, TikTok e YouTube Shorts.
@@ -92,7 +94,7 @@ A voz `edge` usa um serviço não oficial da Microsoft e pode mudar sem aviso. P
 
 ## Contribua com um estilo em 5 minutos
 
-Não precisa saber programar: um estilo é um arquivo JSON com cores e fontes. Seu @ aparece como autor. O passo a passo está no [CONTRIBUTING.md](CONTRIBUTING.md).
+Não precisa saber programar: um estilo é um arquivo JSON com cores e fontes. Seu @ aparece como autor. O passo a passo está no [CONTRIBUTING.md](CONTRIBUTING.md). Quer uma tarefa pra começar? Veja as [good first issues](https://github.com/zebubit/maquina-de-reels/labels/good%20first%20issue).
 
 ## Mexendo no visual
 
