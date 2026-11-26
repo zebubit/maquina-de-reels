@@ -1,5 +1,7 @@
 # Como contribuir
 
+[English](CONTRIBUTING.en.md)
+
 Toda ajuda conta: um estilo novo, um tipo de cena, uma voz nova, uma correção de texto. Seu nome fica no projeto.
 
 ## 1. Mandar um estilo (o jeito mais fácil, não precisa programar)
